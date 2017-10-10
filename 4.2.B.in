@@ -1,0 +1,19 @@
+formulas(assumptions).
+
+% either a picture is valuable or fake
+picture(p) -> (valuable(p) | fake(p)).
+
+% If it is valuable it is by Rembrandt.
+valuable(p) -> rem(p).
+
+% If it is a fake there will be a police investigation.
+fake(p) -> investigation(p).
+
+end_of_list.
+
+formulas(goals).
+
+% Either the picture is by Rembrandt or there will be a police investigation.
+picture(p) -> (rem(p) | investigation(p)).
+
+end_of_list.

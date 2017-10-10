@@ -1,0 +1,20 @@
+formulas(assumptions).
+
+% If Alan did not lock the door he either forgot or lost the key.
+-locked(d) -> (forgot(a) | lost(k)).
+
+% If he lost the key he will be in trouble.
+lost(k) -> trouble(a).
+
+% If he has a good memory he did not forget.
+good_memory(a) -> -forget(a).
+
+% Alan has a good memory.
+good_memory(a).
+
+end_of_list.
+
+formulas(goals).
+% Either Alan locked the door or he will be in trouble.
+locked(d) | trouble(a).
+end_of_list.

@@ -1,0 +1,26 @@
+formulas(assumptions).
+
+% 1. If Tarquin learns philosophy then he acquires wisdom and if he learns science he will advance human knowledge.
+Learns(t, p) -> Aquires(t, w).
+Learn(t, s) -> Advance(t, humanKnowledge).
+
+% 2. If he acquires wisdom, Tarquin will not die in misery.
+Aquires(t, w) -> -DieInMisery(t).
+
+% 3. If he advances human knowledge, his aspirations will be satisfied.
+Advance(t, humanKnowledge) -> ApirationsStatisfied(t).
+
+% 4. If Tarquin's aspirations are not satisfied he will die in misery.
+-ApirationsStatisfied(t) -> DieInMisery(t).
+
+% 5. Alas, Tarquin's aspirations will never be satisdfied.
+-ApirationsStatisfied(t).
+
+end_of_list.
+
+formulas(goals).
+
+% Thus, he learns neither philosophy nor science.
+-Learns(t, p) | -Learns(t, s).
+
+end_of_list.

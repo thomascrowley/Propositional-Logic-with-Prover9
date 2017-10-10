@@ -1,0 +1,25 @@
+formulas(assumptions).
+
+% Sunday is a Holiday.
+Sunday(d) -> Holiday(d).
+
+% Saturday and Sunday is the weekend.
+(Saturday(d) | Sunday (d)) -> Weekend(d).
+
+% On holidays the University is closed.
+Weekend(d) -> Closed(u).
+
+% It is the weekend.
+Weekend(d).
+
+% It is not Saturday
+-Saturday(d).
+
+end_of_list.
+
+formulas(goals).
+
+% The University is closed.
+Closed(u).
+
+end_of_list.
