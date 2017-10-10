@@ -1,0 +1,12 @@
+formulas(assumptions).
+
+Reptile -> -Fur.
+Snake -> Reptile.
+
+end_of_list.
+
+formulas(goals).
+
+Snake -> -Fur.
+
+end_of_list.

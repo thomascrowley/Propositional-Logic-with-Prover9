@@ -1,0 +1,12 @@
+formulas(assumptions).
+
+Greek -> Men.
+Men -> Mortal.
+
+end_of_list.
+
+formulas(goals).
+
+Greek -> Mortal.
+
+end_of_list.
